@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     background-color: rgb(13, 56, 87);
+    box-sizing: border-box;
 }
 body{
     width: 100vw;
