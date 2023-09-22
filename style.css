@@ -136,10 +136,17 @@ body{
     margin: 0 auto;
     grid-template-columns: repeat(20, auto);
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 80px;
     /* padding-bottom: 40px; */  
 }
 
+.winner{
+  display: flex;
+  justify-content: center;
+}
+.winner h1{
+  color: aliceblue;
+}
 
 
 
