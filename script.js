@@ -175,6 +175,69 @@ function winner(turn,row) {
 
 
 
+
+
+
+  // Check diagonally (top-left to bottom-right)
+  for (let row2 = 0; row2 <= 15; row2++) {
+    for (let col = 0; col <= 15; col++) {
+      // let consecutive = true;
+      for (let i = 0; i < 5; i++) {
+        if (matrix[row2 + i][col + i] == turn) {
+
+          count++;
+          // consecutive = false;
+          // break;
+        }else{
+          break;
+        }
+      }
+
+
+          
+    if (count >= 5) {
+      break;
+
+    }else {
+      count = 0;
+    }
+      // if (consecutive) {
+      //   return true;
+      // }
+    }
+  }
+
+  // Check diagonally (top-right to bottom-left)
+  for (let row3 = 0; row3 <= 15; row3++) {
+    for (let col = 4; col < 20; col++) {
+      // let consecutive = true;
+      for (let i = 0; i < 5; i++) {
+        if (matrix[row3 + i][col - i] == turn) {
+          count++;
+          // consecutive = false;
+          // break;
+        }else{
+          break;
+        }
+      }
+
+
+      if (count >= 5) {
+        break;
+  
+      }else {
+        count = 0;
+      }
+      // if (consecutive) {
+      //   return true;
+      // }
+    }
+  }
+
+
+
+
+
     if (count >= 5) {
 
 
