@@ -107,23 +107,28 @@ function winner(turn,row) {
       for (let i = 0; i < 5; i++) {
 
         if (matrix[row] && matrix[row][col + i] == turn) {
+          
 
           // console.log(turn, matrix[row][col + i]);
 
           count++;
 
+          console.log(count);
 
-          if (count >= 5) {
-            break;
-          }
+
+          // if (count >= 5) {
+          //   break;
+          // }
 
         } else{
-
           break;
-          
         }
 
       }
+
+      // if(count<5){
+      //   count=0;
+      // }
 
       if (count >= 5) {
         break;
@@ -133,6 +138,43 @@ function winner(turn,row) {
       }
 
     }
+
+
+
+ // Check vertically
+ for (let col = 0; col < cols; col++) {
+  for (let row1 = 0; row1 <= 15; row1++) {
+    // let consecutive = true;
+    for (let i = 0; i < 5; i++) {
+      if (matrix[row1 + i][col] == turn) {
+
+
+        count++;
+        // consecutive = false;
+        // break;
+      }else{
+        break;
+      }
+    }
+
+
+    
+    if (count >= 5) {
+      break;
+
+    }else {
+      count = 0;
+    }
+
+    // if (consecutive) {
+    //   return true;
+    // }
+  }
+}
+
+
+
+
     if (count >= 5) {
 
 
@@ -159,7 +201,7 @@ function game1(id) {
   let element = document.getElementById(id);
   let row = Math.ceil(id/20)-1;
 
-  console.log(row);
+  // console.log(row);
   if (turn === "X" && element.innerHTML == "") {
     element.innerHTML = "X";
     
