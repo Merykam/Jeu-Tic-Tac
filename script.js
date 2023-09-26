@@ -267,7 +267,7 @@ function game1(id) {
   // console.log(row);
   if (turn === "X" && element.innerHTML == "") {
     element.innerHTML = "X";
-    
+    element.classList.add("red");   
     // console.log(turn);
     winner(turn,row);
     // run(turn);
@@ -276,6 +276,7 @@ function game1(id) {
 
   } else if (turn === "O" && element.innerHTML == "") {
     element.innerHTML = "O";
+    element.classList.add("blue");
 
     // console.log(turn);
     winner(turn,row);
