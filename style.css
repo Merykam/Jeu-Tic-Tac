@@ -14,11 +14,39 @@ body{
     background-image: url("tic.jpg");
     background-size: cover;
 }
-.flex{
+/* .flex{
   display: flex;
-}
+} */
 .show-result{
   display: flex;
+}
+.replay-button{
+
+  padding: 12px;
+  border-radius: 1rem;
+  color: aliceblue;
+  border: solid 0px white;
+  background-color: gray;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+
+  
+}
+.reset-button{
+  padding: 12px;
+  border-radius: 1rem;
+  color: aliceblue;
+  background-color: gray;
+  border: solid 0px white;
+  margin-left: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  font-weight: bold;
+}
+.img{
+  width: 50px;
+  height: 50px;
+  background-image: url("2.png");
+  background-size: cover;
 }
 
 /* style welcome */
@@ -150,14 +178,11 @@ body{
 
 /* end style welcome */
 
-.container2{
-  display: flex;
-  flex-direction: column;
-}
+
 .game-container {
     
     display: grid;
-    gap: 3px;
+    gap: 0px;
     max-width: 600px;
     /* height: 50px; */
     /* width: 100vw; */
@@ -168,6 +193,7 @@ body{
     /* padding-top: 19px; */
     /* padding-bottom: 40px; */  
 }
+
 
 /* .winner{
   display: flex;
@@ -183,11 +209,23 @@ body{
   display: grid;
   justify-content: center;
   /* height: 50px; */
-  gap: 15px;
+  gap: 10px;
   grid-template-columns: repeat(2, auto);
+
+}
+.buttons{
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.score{
+  display: flex;
+  justify-content: center;
 }
 
-
+/* .card{
+  height: 3rem !important;
+} */
 
 
 .cell {
@@ -207,21 +245,4 @@ body{
     /* box-shadow:  #024164 0px 5px 15px; */
 
 } 
-/* Add styling for the message and reset button */
-/* .message {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 24px;
-} */
-/* 
-.reset-button {
-    display: block;
-    margin: 0 auto;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-} */ 
+

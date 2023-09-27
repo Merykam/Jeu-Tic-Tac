@@ -15,40 +15,12 @@ let score2 = parseInt(localStorage.getItem("score2")) || 0;
 document.getElementById("score1").innerHTML = score1;
 document.getElementById("score2").innerHTML = score2;
 
-// console.log(game);
+
 
 let i;
 let turn = "X";
 
 let matrix = [];
-
-
-
-
-// function checkConsecutive(turn) {
-//     const rows = 20;
-//     const cols = 20;
-
-//     // Check horizontally
-//     for (let row = 0; row < rows; row++) {
-//       for (let col = 0; col <= cols - 5; col++) {
-//         let consecutive = true;
-//         for (let i = 0; i < 5; i++) {
-//           if (matrix[row][col + i] !== turn) {
-//             consecutive = false;
-//             break;
-//           }
-//         }
-//         if (consecutive) {
-//           return true;
-//         }
-//       }
-//     }
-
-
-
-//     return false;
-//   }
 
 
 
@@ -80,7 +52,7 @@ function winner(turn,row) {
 
 
   }
-  // console.log(squares);
+
 
 
   if (squares.length === 400) {
@@ -94,7 +66,7 @@ function winner(turn,row) {
       matrix.push(chunk);
     }
 
-    // console.log(matrix);
+
 
 
 
