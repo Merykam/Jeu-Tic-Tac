@@ -5,6 +5,16 @@ let container = document.querySelector(".container");
 
 let winnerTitle = document.querySelector(".winner h1");
 
+
+
+
+let score1 = parseInt(localStorage.getItem("score1")) || 0;
+let score2 = parseInt(localStorage.getItem("score2")) || 0;
+
+// Mettre à jour l'affichage initial des scores
+document.getElementById("score1").innerHTML = score1;
+document.getElementById("score2").innerHTML = score2;
+
 // console.log(game);
 
 let i;
@@ -238,10 +248,36 @@ function winner(turn,row) {
 
 
 
+
     if (count >= 5) {
 
+      if(turn=="X"){
 
-      winnerTitle.innerHTML=`${turn} is the winner`;
+        score1++;
+
+        console.log(score1);
+
+        localStorage.setItem("score1",score1);
+        let scorej1=localStorage.getItem("score1");
+
+        let j1=document.getElementById("score1");
+        j1.innerHTML=scorej1;
+      
+
+
+      }else if(turn == "O"){
+        score2++;
+        console.log(score2);
+        localStorage.setItem("score2",score2);
+        let scorej2=localStorage.getItem("score2");
+
+        let j2=document.getElementById("score2");
+
+        j2.innerHTML=scorej2;
+
+      }
+
+      // winnerTitle.innerHTML=`${turn} is the winner`;
 
       console.log(`Five consecutive squares with content found.`);
       // break;
@@ -288,31 +324,34 @@ function game1(id) {
 }
 
 
+function getItems(){
+  let j1= localStorage.getItem("joueur1");
+  let j2= localStorage.getItem("joueur2");
+
+
+  let firstplayer=document.getElementById("firstplayer");
+  let secondplayer=document.getElementById("secondplayer");
+
+  firstplayer.innerHTML=j1;
+  secondplayer.innerHTML=j2;
 
 
 
+  console.log(j1);
 
-// for(let row=0; row<=20; row++){
+  console.log(j2);
+}
 
-//   for(let col=0; col<=20; col++){
-
-//     for(let j=0;j<5;j++){
-
-
-//       if(matrix[row][col+j]=="x"){
-
-//         console.log("noice");
-  
-//        }
-
-//     }
-
-     
+getItems();
 
 
-//   }
+function deconnection(){
+  localStorage.clear();
+  window.location.href = "welcome.html";
+}
 
-// }
-
+function refresh(){
+  location.reload(); 
+}
 
 
